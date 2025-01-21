@@ -2,9 +2,6 @@ class Bicycle:
     legalIdentifier = "BIC-12953434ii34" # Klassenattribut existiert nur einmal - für alle gleich
     # Besitzer_in (owner), Farbe (color), Groesse (size)
 
-
-
-
     @property
     def size(self):
         return self.__size
