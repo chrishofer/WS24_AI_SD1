@@ -1,10 +1,12 @@
 import math
 from math import e
 
+
 class Hund: # definieren neue Klasse
     species = "Canis lupus familiaris" # Klassenattribut oder auch stat. Attribut genannt
     # zahler zaehlt mit wie viele hunde geboren wurden
     zaehler = 0
+
 
     # nur lesender zugriff mit get property
     @property
@@ -84,7 +86,9 @@ class Corgi(Hund):
         self.loves_food = loves_food
 
     def gib_laut(self, text: str):
-        super().gib_laut("Bin auch ein Hund - aber speziell")
+        super().gib_laut("Bin auch ein Hund - aber speziell") # rufen implementation der basisklasse auf
+        # das ist nur ein Beispiel - allgemein müssen wir das beim Methoden überschreiben nicht machen
+        # hier wollen wir nur die implementation wiederverwenden
         print(f"Liebe {self.loves_food}")
 
 
@@ -97,3 +101,5 @@ if __name__ == '__main__':
     c = Corgi("Cheddar", 10, "Emmentaler")
 
     c.gib_laut("Wuff")
+    print(c.age)
+
